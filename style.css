@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #181731;
+}
+
+nav {
+  background-color: #222;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 75px;
+  width: auto;
+  border-radius: 4px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem; 
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem; 
+  letter-spacing: 0.5px; 
+  transition: color 0.3s, border-bottom 0.3s;
+  padding-bottom: 4px;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;
+}
+
+.nav-links a.active {
+  color: #00bcd4;
+  border-bottom: 2px solid #00bcd4;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+  transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: #222;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  margin-top: 80px;
+  padding: 120px 20px;
+  color: white;
+  background-image: url("Squad.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+.hero h1,.hero p {
+  position: relative;
+  z-index: 1;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+}
+
+.table-container {
+  width: 100%;
+  margin: 40px auto;
+  background: #0d0d1a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-container h2 {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+td {
+  color: white;
+}
+
+th {
+  background-color: #004d98;
+  color: white;
+}
+
+p {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.table-container p {
+  line-height: 1.6;
+  color: #ddd;
+}
+hr {
+  margin-bottom: 15px;
+}
+
+.container h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: white; 
+}
+
+.container {
+  width: 60%;
+  margin: 60px auto;
+  background: #0d0d1a; 
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  border-left: 8px solid #A50044; 
+  float: left;
+}
+
+.container h2 {
+  text-align: center;
+  color: #A50044; 
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.container h3 {
+  text-align: center;
+  color: #004D98; 
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  color: white;
+  font-weight: 600;
+}
+
+input, textarea, select {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #1d1b36;
+  color: white;
+  font-size: 1rem;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border: 1px solid #A50044; 
+}
+
+button {
+  margin-top: 10px;
+  padding: 12px;
+  background: #A50044;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #004D98;
+}
+
