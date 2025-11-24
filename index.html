@@ -11,13 +11,13 @@
   <nav>
     <div class="logo">
       <img src="FC_Barcelona.webp" alt="FC_BarcelonaLogo">
-
     </div>
+
     <ul class="nav-links" id="navLinks">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Profile</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#profile">Profile</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
 
     <div class="hamburger" id="hamburger">
@@ -27,12 +27,13 @@
     </div>    
   </nav>
 
-<section class="hero">
+<section class="hero" id="home">
   <h1>FC Barcelona</h1>
   <p>More than a club — Més que un club. Founded in 1899, FC Barcelona is one of the most successful football clubs in the world.</p>
 </section>
 
 <div class="table-container">
+  <section id="profile">
   <h2>Barcelona Profile</h2>
   <table>
     <tbody>
@@ -80,8 +81,9 @@
       </tr>
     </tbody>
   </table>
+  </section>
 
-<section class="about">
+<section class="about" id="about">
   <h2>About the Club</h2>
   <hr>
   <p>Futbol Club Barcelona, commonly known as FC Barcelona and colloquially as Barça, is a professional football club based in Barcelona, Catalonia, Spain, that competes in La Liga, the top flight of Spanish football.</p>
@@ -111,7 +113,7 @@
 
 <hr>
 
-<section class="container">
+  <section class="container" id="contact">
     <h2>Leave a Message for This Blog</h2>
     <form action="">
         <label for="name">Name:</label>
@@ -134,7 +136,24 @@
 
         <button type="submit">Send Message</button>
     </form>
-</section>
+  </section>
 </div>
+
+<footer>
+<p>© 2025 Reiji Sabian Kuroda FC Barcelona Blog. All Rights Reserved.</p>
+<p><a href="#top" style="color: #ffcccb; text-decoration: none;">↑ Back to Top</a></p>
+</footer>
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("navLinks");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
+
 </body>
 </html>
+
+
